@@ -63,6 +63,7 @@ UTILS------------------------------------------------------
   height: 800px;
   overflow: hidden;
   position: relative;
+  border-radius: 30px;
 }
 
 .slides-box {
@@ -82,6 +83,21 @@ UTILS------------------------------------------------------
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: rgba(245, 245, 245, 0.397);
+  text-align: center;
+  line-height: 60px;
+  font-size: 40px;
+}
+
+/* .arrow-down:hover,
+.arrow-up:hover {
+  border: 1px solid yellow;
+} */
+
+.arrow-down:active,
+.arrow-up:active {
+  border: 3px solid greenyellow;
 }
 
 .arrow-down {
@@ -96,6 +112,32 @@ UTILS------------------------------------------------------
   width: 200px;
   height: 800px;
   position: absolute;
-  left: 0;
+  top: 0px;
+  right: 0px;
   display: none;
+  border-top-right-radius: 30px;
+}
+
+.mini-slide {
+  height: 160px;
+  width: 200px;
+  border: 1px solid rgba(245, 245, 245, 0.397);
+}
+
+.mini-slide {
+  height: 160px;
+  width: 200px;
+  border: 1px solid rgba(245, 245, 245, 0.397);
+}
+
+.mini-slide:first-of-type {
+  border-top-right-radius: 30px;
+}
+
+.mini-slide:last-of-type {
+  border-bottom-right-radius: 30px;
+}
+
+.mini-slide.focus {
+  border: 2px solid yellow;
 }
