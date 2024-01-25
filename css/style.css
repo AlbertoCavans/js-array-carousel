@@ -49,3 +49,53 @@ UTILS------------------------------------------------------
 }
 
 /* CSS------------------------------------------------- */
+
+.container-fluid {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-box {
+  width: 1000px;
+  height: 800px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides-box {
+  height: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arrow-down,
+.arrow-up {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow-down {
+  bottom: 20px;
+}
+
+.arrow-up {
+  top: 20px;
+}
+
+.side-column-slides {
+  width: 200px;
+  height: 800px;
+  position: absolute;
+  left: 0;
+  display: none;
+}
