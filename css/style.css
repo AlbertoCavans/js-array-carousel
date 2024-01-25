@@ -74,6 +74,11 @@ UTILS------------------------------------------------------
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: none;
+}
+
+.img.selected {
+  display: block;
 }
 
 .arrow-down,
@@ -138,6 +143,6 @@ UTILS------------------------------------------------------
   border-bottom-right-radius: 30px;
 }
 
-.mini-slide.focus {
+.mini-slide.selected {
   border: 2px solid yellow;
 }
