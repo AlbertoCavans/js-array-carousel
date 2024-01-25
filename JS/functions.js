@@ -3,7 +3,7 @@
 function getrandomNumber(min, max) {
   min = parseInt(min);
   max = parseInt(max);
-  if (isNan(min) || isNaN(max)) {
+  if (isNaN(min) || isNaN(max)) {
     console.error("I valori inseriti devono essere numerici");
     return;
   }
