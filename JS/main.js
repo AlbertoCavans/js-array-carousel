@@ -30,24 +30,7 @@ imgsBoxLink.innerHTML = imgsHtml;
 /* ARROW DOWN */
 
 arrowDownLink.addEventListener("click", function () {
-  const oldMiniImg = allMiniImgs[currentIndex];
-  oldMiniImg.classList.remove("selected");
-
-  const allImgs = document.getElementsByClassName("img");
-  let prevImg = allImgs[currentIndex];
-  prevImg.classList.remove("selected");
-
-  if (currentIndex >= allImgs.length - 1) {
-    currentIndex = 0;
-  } else {
-    currentIndex++;
-  }
-
-  const newMiniImg = allMiniImgs[currentIndex];
-  newMiniImg.classList.add("selected");
-
-  const nextImg = allImgs[currentIndex];
-  nextImg.classList.add("selected");
+  selfClickDown();
 
   /*   let miniImgHtml = "";
   for (let i = 0; i < imgs.length; i++) {
@@ -140,3 +123,50 @@ sideColumn.innerHTML = miniImgHtml;
     imgsBoxLink.innerHTML = imgsHtml;
   });
 } */
+
+/* INTERVALS */
+
+setInterval(function () {
+  selfClickDown();
+  /*   const oldMiniImg = allMiniImgs[currentIndex];
+  oldMiniImg.classList.remove("selected");
+
+  const allImgs = document.getElementsByClassName("img");
+  let prevImg = allImgs[currentIndex];
+  prevImg.classList.remove("selected");
+
+  if (currentIndex >= allImgs.length - 1) {
+    currentIndex = 0;
+  } else {
+    currentIndex++;
+  }
+
+  const newMiniImg = allMiniImgs[currentIndex];
+  newMiniImg.classList.add("selected");
+
+  const nextImg = allImgs[currentIndex];
+  nextImg.classList.add("selected"); */
+}, 3000);
+
+/* SELFCLICK */
+
+function selfClickDown() {
+  const oldMiniImg = allMiniImgs[currentIndex];
+  oldMiniImg.classList.remove("selected");
+
+  const allImgs = document.getElementsByClassName("img");
+  let prevImg = allImgs[currentIndex];
+  prevImg.classList.remove("selected");
+
+  if (currentIndex >= allImgs.length - 1) {
+    currentIndex = 0;
+  } else {
+    currentIndex++;
+  }
+
+  const newMiniImg = allMiniImgs[currentIndex];
+  newMiniImg.classList.add("selected");
+
+  const nextImg = allImgs[currentIndex];
+  nextImg.classList.add("selected");
+}
