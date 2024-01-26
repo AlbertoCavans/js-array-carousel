@@ -21,3 +21,11 @@ Dato un array contenente una lista di cinque immagini, creare un carosello come 
 ## Obiettivo pt.2
 
 Aggiungere funzionalità sul carosello in modo che ogni 3 secondi lo slider scorra all'immagine successiva. Se non è stato già fatto, abilitare slider infinito (quando arrivo alla fine, ricomincio da capo, sia con l'interval che con i pulsanti). Aggiungere il ciclo infinito del carosello (se non è stato fatto). Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare all'immagine precedente, dovrà comparire l'ultima immagine dell'array e viceversa.
+
+## Procedimento pt.2
+
+- Preparare un setInterval con una funzione generica vuota e un intervallo di 3000millisecondi
+- Preparare una funzione vuota che riempire con il codice per gestire il clickDown
+- Copiamo e cancelliamo il codice della funzione dentro l'addEventListener del collegamento alla freccia verso il basso, poi lo incolliamo dentro la funzione vuota che abbiamo preparato per gestire il clickDown,
+- Dentro l'addEventListener del collegamento alla freccia verso il basso invochiamo la funzione che abbiamo riempito con il codice per gestire il clickDown
+- Dentro alla funzione generica vuota, del setInterval, invochiamo la funzione che abbiamo riempito con il codice per gestire il clickDown
