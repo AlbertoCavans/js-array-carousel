@@ -2,6 +2,7 @@
 const imgsBoxLink = document.querySelector(".imgs-box");
 const arrowDownLink = document.querySelector(".arrow-down");
 const arrowUpLink = document.querySelector(".arrow-up");
+const sideColumn = document.querySelector(".side-column-slides");
 
 /* PROCESS */
 const imgs = ["01.webp", "02.webp", "03.webp", "04.webp", "05.webp"];
@@ -28,8 +29,12 @@ imgsBoxLink.innerHTML = imgsHtml;
 
 arrowDownLink.addEventListener("click", function () {
   const allImgs = document.getElementsByClassName("img");
+  const allMiniSlides = document.getElementsByClassName("mini-slide");
   let prevImg = allImgs[currentIndex];
   prevImg.classList.remove("selected");
+
+  const prevMiniSlide = allMiniSlides[currentIndex];
+  prevMiniSlide.classList.remove("selected");
 
   if (currentIndex >= allImgs.length - 1) {
     currentIndex = 0;
@@ -39,6 +44,9 @@ arrowDownLink.addEventListener("click", function () {
 
   const nextImg = allImgs[currentIndex];
   nextImg.classList.add("selected");
+
+  const nextMiniSlide = allMiniSlides[currentIndex];
+  nextMiniSlide.classList.add("selected");
 });
 
 /* ARROW UP */
@@ -49,8 +57,12 @@ arrowDownLink.addEventListener("click", function () {
 
 arrowUpLink.addEventListener("click", function () {
   const allImgs = document.getElementsByClassName("img");
+  const allMiniSlides = document.getElementsByClassName("mini-slide");
   let prevImg = allImgs[currentIndex];
   prevImg.classList.remove("selected");
+
+  const prevMiniSlide = allMiniSlides[currentIndex];
+  prevMiniSlide.classList.remove("selected");
 
   if (currentIndex <= 0) {
     currentIndex = allImgs.length - 1;
@@ -60,4 +72,15 @@ arrowUpLink.addEventListener("click", function () {
 
   const nextImg = allImgs[currentIndex];
   nextImg.classList.add("selected");
+
+  const nextMiniSlide = allMiniSlides[currentIndex];
+  nextMiniSlide.classList.add("selected");
 });
+
+/* ATTIVO LE SLIDE LATERALI */
+let miniSlideHtml = "";
+for (let i = 0; i < imgs.length; i++) {
+  const selectedClass = i == currentIndex ? "selected" : "";
+  miniSlideHtml += `<div class="mini-slide ${selectedClass}"></div>`;
+}
+sideColumn.innerHTML = miniSlideHtml;
