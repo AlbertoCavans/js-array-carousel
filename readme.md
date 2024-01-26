@@ -17,3 +17,7 @@ Dato un array contenente una lista di cinque immagini, creare un carosello come 
 - Rimuoviamo da tutte le slide la classe active
 - Usiamo un'istruzione condizionale if-else per creare un loop che permetta di scorrere in basso o in alto fino a ricominciare dalla slide rispettivamente opposta
 - Assegnamo la classe active solo alla slide indidicata dalla variabile indice delle slide
+
+## Obiettivo pt.2
+
+Aggiungere funzionalità sul carosello in modo che ogni 3 secondi lo slider scorra all'immagine successiva. Se non è stato già fatto, abilitare slider infinito (quando arrivo alla fine, ricomincio da capo, sia con l'interval che con i pulsanti). Aggiungere il ciclo infinito del carosello (se non è stato fatto). Ovvero se è attiva la prima immagine e l'utente clicca la freccia per andare all'immagine precedente, dovrà comparire l'ultima immagine dell'array e viceversa.
