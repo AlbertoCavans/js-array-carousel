@@ -59,15 +59,19 @@ UTILS------------------------------------------------------
 }
 
 .album-box {
-  width: 1000px;
-  height: 800px;
+  width: 1200px;
+  height: 900px;
   overflow: hidden;
   position: relative;
   border-radius: 30px;
 }
 
 .imgs-box {
-  height: 100%;
+  width: 1000px;
+  height: 900px;
+  justify-content: center;
+  display: flex;
+  align-items: start;
 }
 
 .img {
@@ -75,6 +79,8 @@ UTILS------------------------------------------------------
   height: 100%;
   object-fit: cover;
   display: none;
+  position: absolute;
+  right: 0px;
 }
 
 .img.selected {
@@ -114,24 +120,24 @@ UTILS------------------------------------------------------
 }
 
 .side-column-slides {
-  width: 200px;
-  height: 800px;
-  position: absolute;
+  width: 240px;
+  height: 900px;
+  position: relative;
   top: 0px;
   right: 0px;
-  display: none;
+  /* display: none; */
   border-top-right-radius: 30px;
 }
 
 .mini-slide {
-  height: 160px;
-  width: 200px;
+  height: calc(900px / 5);
+  width: 240px;
   border: 1px solid rgba(245, 245, 245, 0.397);
 }
 
 .mini-slide {
-  height: 160px;
-  width: 200px;
+  height: calc(900px / 5);
+  width: 240px;
   border: 1px solid rgba(245, 245, 245, 0.397);
 }
 
